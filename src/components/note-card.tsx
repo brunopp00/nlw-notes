@@ -17,7 +17,7 @@ export function NoteCard({ note, onNoteDeleted }: NoteCardProps) {
     <Dialog.Root>
       <Dialog.Trigger className="rounded-md text-left flax flex-col bg-slate-800 p-5 gap-3 outline-none overflow-hidden relative  hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-lime-400">
         <span className="text-sm font-medium text-slate-300">
-          {formatDistanceToNow(note.date.toISOString(), {
+          {formatDistanceToNow(note.date, {
             locale: ptBR,
             addSuffix: true,
           })}
@@ -35,7 +35,7 @@ export function NoteCard({ note, onNoteDeleted }: NoteCardProps) {
 
           <div className="flex flex-1 flex-col gap-3 p-5">
             <span className="text-sm font-medium text-slate-300">
-              {formatDistanceToNow(note.date.toISOString(), {
+              {formatDistanceToNow(note.date, {
                 locale: ptBR,
                 addSuffix: true,
               })}
